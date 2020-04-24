@@ -11,7 +11,8 @@ class PatronsController extends Controller
         
     public function show(patrons $patrons)
     {
-       $patrons = DB::table('patrons')->get();
+        $patrons = Patrons::all();
+        //$patrons = DB::table('patrons')->get();
         //return $this->whereKey($ids)->get($title);
         
         return view('patrons.show', ['patrons' => $patrons]
@@ -32,5 +33,9 @@ class PatronsController extends Controller
 
         return view('patrons.index', ['patrons' => $patrons]);
     }
+
+
+    
+
     
     }

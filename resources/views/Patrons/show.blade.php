@@ -73,6 +73,7 @@
                     <a href="/authors">Authors</a>
                     <a href="https://www.loc.gov/">Contact Us</a>
                     <a href="/patrons/create">**Add a New Patron**</a>
+                    <a href="/patrons/create">**Remove a Patron-Coming Soon**</a>
                 </div>
                 <div class="title m-b-md">
                     Patrons

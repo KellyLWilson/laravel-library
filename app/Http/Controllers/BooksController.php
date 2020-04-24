@@ -12,7 +12,8 @@ class BooksController extends Controller
     
     public function show(books $books)
     {
-       $books = DB::table('books')->get();
+       $books = Books::all();
+        //$books = DB::table('books')->get();
         //return $this->whereKey($ids)->get($title);
         
         return view('books.show', ['books' => $books]
