@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel Library</title>
+        <title>Patrons</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -64,7 +64,7 @@
         </style>
     </head>
     <body>
-        {{-- <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -77,18 +77,21 @@
                         @endif
                     @endauth
                 </div>
-            @endif --}}
+            @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome to My Laravel Library!
+                    Current Patrons
                 </div>
 
                 <div class="links">
-                    <a href="/books">Books</a>
-                    <a href="/patrons">Patrons</a>
-                    <a href="/authors">Authors</a>
-                    <a href="https://www.loc.gov/">Contact Us</a>
+                    <a href="https://laravel.com/docs">Books</a>
+                    <a href="https://laracasts.com">Users</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="https://nova.laravel.com">Nova</a>
+                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://vapor.laravel.com">Vapor</a>
                     
                 </div>
             </div>

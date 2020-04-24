@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
+
+
+Route::get('books', 'BooksController@show');
+Route::get('patrons', 'PatronsController@show');
+Route::get('authors', 'AuthorsController@show');
+Route::get('/patrons/create', 'PatronsController@create');
+Route::get('/books/create', 'BooksController@create');
+Route::get('/authors/create', 'AuthorsController@create');
+Route::post('/authors/create', 'AuthorsController@store');
+Route::get('/books/create', 'BooksController@create');
+Route::post('/books/create', 'BooksController@store');
+Route::get('/patrons/create', 'PatronsController@create');
+Route::post('/patrons/create', 'PatronsController@store');

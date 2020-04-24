@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel Library</title>
+        <title>Patrons</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -64,33 +64,41 @@
         </style>
     </head>
     <body>
-        {{-- <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif --}}
+        
 
             <div class="content">
-                <div class="title m-b-md">
-                    Welcome to My Laravel Library!
-                </div>
-
                 <div class="links">
+                    <a href="/welcome">Home</a>
                     <a href="/books">Books</a>
-                    <a href="/patrons">Patrons</a>
                     <a href="/authors">Authors</a>
                     <a href="https://www.loc.gov/">Contact Us</a>
-                    
+                    <a href="/patrons/create">**Add a New Patron**</a>
                 </div>
+                <div class="title m-b-md">
+                    Patrons
+                </div> 
+            
+            <table>
+                <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Phone</th>
+                </tr>
+                <tr>
+                    @foreach ($patrons as $patron) 
+
+            <td>{{ $patron->firstname }}</td>
+            <td>{{ $patron->lastname }}</td>
+           <td>{{ $patron->email }}</td>
+           <td>{{ $patron->phone }}</td>
+        </tr>
+            
+           
+            @endforeach 
+                </tr>
+              </table>  
+
             </div>
         </div>
     </body>
