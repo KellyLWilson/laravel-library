@@ -1,12 +1,10 @@
-
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Book Selection</title>
+        <title>New Books</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -70,23 +68,24 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Available Books
+                    New Book
                 </div>
 
-            @foreach ($books as $book) 
+             
 
-            <a>{{ $book->title }}   
+            <a>{{ $books }}   
                 <br>
             </a>
-            @endforeach 
-            @foreach ($books as $book->title)
-                    <a href="{{ route('books.show')}}">{{ $book->title }}</a>
-                @endforeach
-           
+            <br>
+            <br>
+            <div class="content">
+                <div class="links">
+                    <a href="/books">Return to the List of Books</a>
+                    
+                    
+                </div>
+        
             
-            
-                
-
             </div>
         </div>
     </body>

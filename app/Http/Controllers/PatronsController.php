@@ -17,12 +17,20 @@ class PatronsController extends Controller
         return view('patrons.show', ['patrons' => $patrons]
     );
     }
+
+
+    public function create(Patrons $patrons)
+    {
+        return view('patrons.create',);
+    }
+
+    public function store()
+    {
+        $patrons = new Patrons(request(['firstname', 'lastname','email', 'phone']));
     
-    
-    
-    
-       
-          
-    
+        $patrons->save();
+
+        return view('patrons.index', ['patrons' => $patrons]);
+    }
     
     }

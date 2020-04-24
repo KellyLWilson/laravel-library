@@ -17,31 +17,15 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-// Route::get('/books', function () {
-    
-//     return view('books');
-// });
-
-    // Route::get('/books', function() {
-    //     $books = DB::table('books')->get();
-    //     //$books = App\Books::all();
-
-    //     dd($books);  
-
-    // //     //return $book;
-        
-    // //     //return view('books');
-    // });
-
-// Route::get('/patrons', function () {
-//     $patron = App\Patron::all();
-//     dd($patron);
-//     //return view('patrons');
-// });
-
 
 Route::get('books', 'BooksController@show');
 Route::get('patrons', 'PatronsController@show');
 Route::get('authors', 'AuthorsController@show');
-//Route::get('books', 'BooksController@index');
-//Route::get('/books/{book}', 'BooksController@show')->name('books.show');
+Route::get('/patrons/create', 'PatronsController@create');
+Route::get('/books/create', 'BooksController@create');
+Route::get('/authors/create', 'AuthorsController@create');
+Route::post('/authors/create', 'AuthorsController@store');
+Route::get('/books/create', 'BooksController@create');
+Route::post('/books/create', 'BooksController@store');
+Route::get('/patrons/create', 'PatronsController@create');
+Route::post('/patrons/create', 'PatronsController@store');

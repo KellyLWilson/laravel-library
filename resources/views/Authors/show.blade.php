@@ -72,6 +72,7 @@
                     <a href="/books">Books</a>
                     <a href="/patrons">Patrons</a>
                     <a href="https://www.loc.gov/">Contact Us</a>
+                    <a href="/authors/create">**Create A New Author**</a>
                     
                 </div>
                 <div class="title m-b-md">

@@ -17,5 +17,20 @@ class AuthorsController extends Controller
         return view('authors.show', ['authors' => $authors]
     );
     }
+
+    public function create(Authors $authors)
+    {
+        return view('authors.create',);
+    }
+
+    public function store()
+    {
+        $authors = new Authors(request(['firstname', 'lastname','bio']));
+    
+        $authors->save();
+
+        
+        return view('authors.index', ['authors' => $authors]);
+    }
     
     }

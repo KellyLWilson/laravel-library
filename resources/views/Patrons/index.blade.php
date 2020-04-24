@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Book Selection</title>
+        <title>New Patron</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -67,36 +67,25 @@
         
 
             <div class="content">
-                <div class="links">
-                        <a href="/welcome">Home</a>
-                        <a href="/patrons">Patrons</a>
-                        <a href="/authors">Authors</a>
-                        <a href="https://www.loc.gov/">Contact Us</a>
-                        <a href="/books/create">**Add A New Book**</a>
-                        
-                    </div>
                 <div class="title m-b-md">
-                    Available Books
+                    New Patron
                 </div>
-                <table>
-                <tr>
-                <th>Title</th>
-                <th>Excerpt</th>
-                <th>Satus</th>
-                </tr>
-                <tr>
-            @foreach ($books as $book) 
 
-            <td>{{ $book->title }}</td>
-            <td>{{ $book->excerpt }}</td>
-           <td>{{ $book->status }}</td>
-        </tr>
+             
+
+            <a>{{ $patrons }}   
+                <br>
+            </a>
+            <br>
+            <br>
+            <div class="content">
+                <div class="links">
+                    <a href="/patrons">Return to the List of Patrons</a>
+                    
+                    
+                </div>
+        
             
-           
-            @endforeach 
-                </tr>
-              </table>
-
             </div>
         </div>
     </body>
